@@ -88,9 +88,6 @@ function About() {
       <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-white_alt">
         About Me
       </h2>
-      <p className="text-lg text-white_alt font-light mb-4">
-        Here is where I've learned and worked:
-      </p>
       <a
         href="https://www.linkedin.com/in/andrew-rust30/"
         className="inline-flex items-center justify-center px-5 py-3 mr-8 text-base font-medium text-center rounded-lg bg-primary border-primary text-white_alt hover:bg-light_gray hover:text-primary"
@@ -115,6 +112,9 @@ function About() {
         <img src={GitHubLogoDark} className="w-5 h-5 ml-3" alt="nothing" />
 
       </a>
+      <p className="text-lg text-white_alt font-light mb-4 mt-4">
+        Here is where I've learned and worked:
+      </p>
       <div className="flex flex-col md:flex-row">
         {/* Left half - render education */}
         <div className="md:w-1/2 p-4">

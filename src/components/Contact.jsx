@@ -1,5 +1,4 @@
 import React, { useRef } from "react";
-import { MdOutlineEmail } from "react-icons/md";
 import { InlineWidget } from "react-calendly";
 import emailjs from "emailjs-com";
 
@@ -28,15 +27,36 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="pt-24 pb-12 mx-20 items-center">
+    <section
+      id="contact"
+      className="bg-gradient-to-b from-white_alt to-primary bg-gradient-anim duration-2000 dark:bg-gray-900 h-[200%] text-center"
+    >
+      <div className="max-w-6xl mx-auto px-4 py-16">
       <h2 className="text-4xl font-bold text-primary mb-8">Contact Me</h2>
-      <div className="container grid grid-cols-1 lg:grid-cols-2 gap-8">
-        <div className="p-8 border-2 border-primary-variant rounded-lg">
+
+      <a
+        href="/"
+        class="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-center border border-black rounded-lg hover:bg-light_gray bg-primary border-primary text-white_alt hover:bg-light_gray hover:text-primary mr-4"
+      >
+        Book a Meeting
+      </a>
+      <a
+        href="/"
+        class="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-center text-gray border border-black rounded-lg hover:bg-light_gray"
+      >
+        Email Me
+      </a>
+      <p className="text-lg text-primary font-light mb-4 mt-4">
+        Here is where to reach me:
+      </p>
+      <div className="flex flex-col md:flex-row">
+        {/* Left half - render Contact form */}
+        <div className="md:w-1/2 p-4 m-4">
           <form ref={form} onSubmit={sendEmail}>
             <div className="mb-6">
               <label
                 htmlFor="name"
-                className="block text-lg font-medium text-primary mb-2"
+                className="block text-lg font-medium text-white mb-2"
               >
                 Your Name
               </label>
@@ -44,7 +64,7 @@ const Contact = () => {
                 type="text"
                 id="name"
                 name="name"
-                placeholder="Your Name"
+                placeholder="Jane Doe"
                 required
                 className="border-2 border-primary-variant rounded-lg p-2 w-full text-white bg-transparent"
               />
@@ -52,7 +72,7 @@ const Contact = () => {
             <div className="mb-6">
               <label
                 htmlFor="email"
-                className="block text-lg font-medium text-primary mb-2"
+                className="block text-lg font-medium text-white mb-2"
               >
                 Your Email
               </label>
@@ -60,7 +80,7 @@ const Contact = () => {
                 type="email"
                 id="email"
                 name="email"
-                placeholder="Your Email"
+                placeholder="email@gmail.com"
                 required
                 className="border-2 border-primary-variant rounded-lg p-2 w-full text-white bg-transparent"
               />
@@ -68,7 +88,7 @@ const Contact = () => {
             <div className="mb-6">
               <label
                 htmlFor="message"
-                className="block text-lg font-medium text-primary mb-2"
+                className="block text-lg font-medium text-white mb-2"
               >
                 Your Message
               </label>
@@ -76,7 +96,7 @@ const Contact = () => {
                 id="message"
                 name="message"
                 rows="7"
-                placeholder="Your Message"
+                placeholder="How can I help you?"
                 required
                 className="border-2 border-primary-variant rounded-lg p-2 w-full text-white bg-transparent"
               ></textarea>
@@ -88,39 +108,25 @@ const Contact = () => {
               Send
             </button>
           </form>
-          <div className="mt-8">
-            <a
-              href="mailto:andrewrust30@gmail.com"
-              target="_blank"
-              rel="noreferrer"
-              className="flex items-center text-white font-medium mb-4"
-            >
-              <MdOutlineEmail className="mr-2" /> Email Me Directly Instead!
-            </a>
-            <a
-              href="https://calendly.com/andrew-rust"
-              target="_blank"
-              rel="noreferrer"
-              className="bg-primary text-white rounded-lg py-2 px-6 font-medium"
-            >
-              Set up a Calendly Meeting with Me!
-            </a>
+        </div>
+
+        {/* Right half - render Calendly */}
+        <div className="md:w-1/2 p-4 h-full">
+          <div>
+            <InlineWidget
+              styles={{
+                height: "60vh",
+                width: "30vw",
+                alignContent: "center",
+                justifyContent: "center",
+                alignItems: "center",
+                borderRadius: "10px",
+              }}
+              url="https://calendly.com/andrew-rust/networking?hide_gdpr_banner=1"
+            />
           </div>
         </div>
-        <div className="calendly__block">
-          <InlineWidget
-            styles={{
-              border: "2px solid #2081c3",
-
-              height: "102%",
-              width: "100%",
-              alignContent: "center",
-              justifyContent: "center",
-              alignItems: "center",
-            }}
-            url="https://calendly.com/andrew-rust/networking?hide_gdpr_banner=1"
-          />
-        </div>
+      </div>
       </div>
     </section>
   );

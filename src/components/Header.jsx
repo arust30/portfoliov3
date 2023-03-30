@@ -2,17 +2,26 @@ import React, { useState } from "react";
 import ColumbiaPoloHeadshot from "../images/AndrewHeadshotColumbiaPolo.png";
 // import BlueTieSuitHeadshot from "../images/AndrewHeadshotBlueTieSuit.png";
 import { ArrowDownTrayIcon, CheckIcon } from "@heroicons/react/24/outline";
+import AndrewResume from "../images/RustAndrewSWEResumeMarch2023.pdf";
 
 function Header() {
   const [isDownloaded, setIsDownloaded] = useState(false);
 
   const handleDownload = () => {
+    const link = document.createElement('a');
+    link.href = AndrewResume
+    link.target = "_blank"
+    link.rel = "noopener noreferrer"
+    link.download = "RustAndrewSWEResumeMarch2023.pdf"
+    document.body.appendChild(link);
+    link.click();
     setIsDownloaded(true);
-    //wait 5 seconds
     setTimeout(() => {
       setIsDownloaded(false);
+      document.body.removeChild(link);
     }, 5000);
   };
+
   return (
     <>
       <div class="grid max-w-screen-xl h-[75vh] px-4 pt-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12">
@@ -47,8 +56,8 @@ function Header() {
             )}
           </a>
           <a
-            href="/"
-            class="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-center text-gray border border-black rounded-lg hover:bg-light_gray focus:ring-4 focus:ring-gray"
+            href="#contact"
+            class="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-center text-gray border border-black rounded-lg hover:bg-light_gray"
           >
             Contact Me
           </a>
