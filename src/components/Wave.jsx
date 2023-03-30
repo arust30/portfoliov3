@@ -6,6 +6,8 @@ function Wave() {
     <>
       <div class="wave"></div>
       <div class="wave"></div>
+      <div class="reversed-wave"></div>
+      <div class="reversed-wave"></div>
     </>
   );
 }
