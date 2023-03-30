@@ -6,8 +6,11 @@ import React from "react";
 // import ColumbiaImage from "./images/ColumbiaImage.png";
 
 // For now, I'll just use the logos
-import { BeakerIcon, BuildingLibraryIcon, AcademicCapIcon } from "@heroicons/react/24/outline";
-
+import {
+  BeakerIcon,
+  BuildingLibraryIcon,
+  AcademicCapIcon,
+} from "@heroicons/react/24/outline";
 
 //Experience logos
 import LetsWhirlLogo from "./images/logos/LetsWhirlLogo.png";
@@ -22,7 +25,7 @@ function About() {
       school: "North Carolina School of Science and Mathematics (NCSSM)",
       degree: "High School Diploma",
       dates: "2016 - 2018",
-      image: BeakerIcon,
+      icon: BeakerIcon,
     },
     {
       id: 2,
@@ -30,14 +33,14 @@ function About() {
       degree:
         "Bachelor of Science in Engineering, Minor in Computer Science, Mathematics",
       dates: "2019 - 2022",
-      image: BuildingLibraryIcon,
+      icon: BuildingLibraryIcon,
     },
     {
       id: 3,
       school: "Columbia University",
       degree: "Master of Science in Computer Engineering",
       dates: "2022 - 2023",
-      image: AcademicCapIcon,
+      icon: AcademicCapIcon,
     },
   ];
 
@@ -77,17 +80,18 @@ function About() {
       <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-white_alt">
         About Me
       </h2>
+        <p className="text-lg text-white_alt font-light">
+Here is where I've learned and worked:
+        </p>
+
       <div className="flex flex-col md:flex-row">
+
         {/* Left half - render education */}
         <div className="md:w-1/2 p-4">
           <h3 className="text-2xl font-bold mb-4">Education</h3>
           {education.map((item) => (
             <div key={item.id} className="flex mb-4">
-              <img
-                src={item.image}
-                alt={item.school}
-                className="w-1/3 h-auto mr-4 rounded-lg"
-              />
+              <item.icon className="w-1/3 h-20 mr-4 rounded-lg" />
               <div className="flex-1 text-left">
                 <h4 className="text-lg font-bold">{item.school}</h4>
                 <p className="font-light">{item.degree}</p>
@@ -102,16 +106,16 @@ function About() {
           <h3 className="text-2xl font-bold mb-4">Experience</h3>
           {experiences.map((item) => (
             <div key={item.id} className="flex mb-4">
-              <div className="flex-1 text-right">
-                <h4 className="text-lg font-bold">{item.name}</h4>
-                <p className="font-light">{item.title}</p>
-                <p className="font-light">{item.dates}</p>
-              </div>
               <img
                 src={item.image}
                 alt={item.name}
                 className="w-1/3 h-auto mr-4 rounded-lg"
               />
+              <div className="flex-1 text-left">
+                <h4 className="text-lg font-bold">{item.name}</h4>
+                <p className="font-light">{item.title}</p>
+                <p className="font-light">{item.dates}</p>
+              </div>
             </div>
           ))}
         </div>
