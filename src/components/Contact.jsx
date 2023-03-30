@@ -32,26 +32,26 @@ const Contact = () => {
       className="bg-gradient-to-b from-white_alt to-primary bg-gradient-anim duration-2000 dark:bg-gray-900 h-[200%] text-center"
     >
       <div className="max-w-6xl mx-auto px-4 pt-[30vh]">
-      <h2 className="text-4xl font-bold text-primary mb-8">Contact Me</h2>
+      <h2 className="text-4xl font-bold text-primary mb-8 mt-[20vh]">Contact Me</h2>
 
       <a
         href="/"
-        class="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-center border border-black rounded-lg hover:bg-light_gray bg-primary border-primary text-white_alt hover:bg-light_gray hover:text-primary mr-4"
+        class="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-center border rounded-lg duration-200 bg-primary border-primary text-white_alt hover:bg-light_gray hover:text-primary mr-4"
       >
         Book a Meeting
       </a>
       <a
         href="/"
-        class="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-center text-gray border border-black rounded-lg hover:bg-light_gray"
+        class="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-center text-gray duration-200 border border-black rounded-lg hover:bg-light_gray"
       >
         Email Me
       </a>
-      <p className="text-lg text-primary font-light mb-4 mt-4">
+      <p className="text-lg text-white_alt font-light mb-4 mt-4">
         Here is where to reach me:
       </p>
       <div className="flex flex-col md:flex-row">
         {/* Left half - render Contact form */}
-        <div className="md:w-1/2 p-4 m-4">
+        <div className="md:w-1/2 p-4 m-4 text-left">
           <form ref={form} onSubmit={sendEmail}>
             <div className="mb-6">
               <label
@@ -103,7 +103,7 @@ const Contact = () => {
             </div>
             <button
               type="submit"
-              className="bg-primary text-white rounded-lg py-2 px-6 font-medium"
+              class="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-center border rounded-lg duration-200 bg-primary border-primary text-white_alt hover:bg-light_gray hover:text-primary mr-4"
             >
               Send
             </button>

@@ -7,8 +7,6 @@ import WhirlLogo from "./images/logos/LetsWhirlLogo.png";
 import LogTrackLogoBlue from "./images/logos/LogTrackLogoBlue.png";
 import LogTrackWebAppScreenshot from "./images/LogTrackWebAppScreenshot.png";
 
-import ColumbiaImage from "./images/ColumbiaImage.png";
-
 function Projects() {
   const projects = [
     {
@@ -95,7 +93,7 @@ function Projects() {
         </h2>
         <div className="max-w-screen-xl px-4 py-8 mx-auto lg:px-6 sm:py-16 lg:py-24">
           {projects.map((project) => (
-            <div className="p-5 space-y-4 bg-white border border-gray-200 rounded-lg shadow-md lg:p-8 mb-4">
+            <div className="p-8 bg-white border border-gray-200 rounded-lg shadow-md mb-4 mt-[20vh]">
               <div key={project.id} className="text-center">
                 <h3 className="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 mb-4">
                   {project.title}
