@@ -64,47 +64,49 @@ function Projects() {
         </h2>
         <div className="max-w-screen-xl px-4 py-8 mx-auto lg:px-6 sm:py-16 lg:py-24">
           {projects.map((project) => (
-            <div key={project.id} className="text-center">
-              <h3 className="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 mb-4">
-                {project.title}
-              </h3>
-              {project.skills.map((skill) => (
-                <span class="bg-green-100 text-green-800 text-sm font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-green-900 dark:text-green-300">
-                  {skill}
-                </span>
-              ))}
-              <div className="max-w-5xl mx-auto mt-8 lg:mt-16">
-                <img
-                  className="w-[50%] rounded-lg shadow-lg"
-                  src={project.image}
-                  alt="nothing"
-                />
-              </div>
-              <div class="grid grid-cols-1 gap-8 mt-8 lg:gap-16 lg:grid-cols-2 lg:mt-16">
-                <div>
-                  <div>
-                    <h3 class="text-2xl font-extrabold text-gray-900 dark:text-white">
-                      Overview
-                    </h3>
-                    <p class="mt-2 text-lg font-normal text-gray-500 dark:text-gray-400">
-                      {project.overview}
-                    </p>
-                  </div>
+            <div className="p-5 space-y-4 bg-white border border-gray-200 rounded-lg shadow-md lg:p-8 mb-4">
+              <div key={project.id} className="text-center">
+                <h3 className="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 mb-4">
+                  {project.title}
+                </h3>
+                {project.skills.map((skill) => (
+                  <span class="bg-green-100 text-green-800 text-sm font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-green-900 dark:text-green-300">
+                    {skill}
+                  </span>
+                ))}
+                <div className="max-w-5xl mx-auto mt-8 lg:mt-16">
+                  <img
+                    className="w-[50%] rounded-lg shadow-lg"
+                    src={project.image}
+                    alt="nothing"
+                  />
                 </div>
-                <div class="space-y-8">
-                  <h3 class="text-2xl font-extrabold text-gray-900 dark:text-white">
-                    Features
-                  </h3>
-                  <ul class="grid grid-cols-1 mt-8 sm:grid-cols-2 gap-x-4 gap-y-3">
-                    {project.features.map((feature, index) => (
-                      <li key={index} class="flex items-center gap-2.5">
-                        <CheckCircleIcon className="w-5 h-5 text-green-500" />
-                        <span class="text-base font-normal text-gray-500 dark:text-gray-400">
-                          {feature}
-                        </span>
-                      </li>
-                    ))}
-                  </ul>
+                <div class="grid grid-cols-1 gap-8 mt-8 lg:gap-16 lg:grid-cols-2 lg:mt-16">
+                  <div>
+                    <div>
+                      <h3 class="text-2xl font-extrabold text-gray-900 dark:text-white">
+                        Overview
+                      </h3>
+                      <p class="mt-2 text-lg font-normal text-gray-500 dark:text-gray-400">
+                        {project.overview}
+                      </p>
+                    </div>
+                  </div>
+                  <div class="space-y-8">
+                    <h3 class="text-2xl font-extrabold text-gray-900 dark:text-white">
+                      Features
+                    </h3>
+                    <ul class="grid grid-cols-1 mt-8 sm:grid-cols-2 gap-x-4 gap-y-3">
+                      {project.features.map((feature, index) => (
+                        <li key={index} class="flex items-center gap-2.5">
+                          <CheckCircleIcon className="w-5 h-5 text-green-500" />
+                          <span class="text-base font-normal text-gray-500 dark:text-gray-400">
+                            {feature}
+                          </span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
                 </div>
               </div>
             </div>

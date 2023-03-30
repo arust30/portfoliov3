@@ -88,7 +88,7 @@ function About() {
       <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-white_alt">
         About Me
       </h2>
-      <p className="text-lg text-white_alt font-light">
+      <p className="text-lg text-white_alt font-light mb-4">
         Here is where I've learned and worked:
       </p>
       <a
@@ -113,6 +113,7 @@ function About() {
       >
         Github
         <img src={GitHubLogoDark} className="w-5 h-5 ml-3" alt="nothing" />
+
       </a>
       <div className="flex flex-col md:flex-row">
         {/* Left half - render education */}
@@ -120,7 +121,7 @@ function About() {
           <h3 className="text-2xl font-bold mb-4">Education</h3>
           {education.map((item) => (
             <div key={item.id} className="flex mb-4">
-              <item.icon className="w-1/3 h-20 mr-4 rounded-lg" />
+              <item.icon className="w-1/5 h-20 mr-4 rounded-lg" />
               <div className="flex-1 text-left">
                 <h4 className="text-lg font-bold">{item.school}</h4>
                 <p className="font-light">{item.degree}</p>

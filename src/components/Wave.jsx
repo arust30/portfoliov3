@@ -8,6 +8,7 @@ function Wave() {
       <div class="wave"></div>
       {/* <div class="reversed-wave"></div>
       <div class="reversed-wave"></div> */}
+      <div className="bg-primary pb-40"></div>
     </>
   );
 }
