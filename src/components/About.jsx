@@ -118,7 +118,7 @@ function About() {
 
   return (
     <section id="about" className="bg-gradient-to-b from-primary to-white h-[200vh] text-center bg-no-repeat bg-top" style={{"background-size": "100% 100%"}}>
-      <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-white_alt">
+      <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-white_alt pt-[30vh]">
         {lettersOfNameWithSpans}
       </h2>
       <a
@@ -174,7 +174,7 @@ function About() {
               <img
                 src={item.image}
                 alt={item.name}
-                className="w-1/3 h-24 object-contain mr-4 rounded-lg"
+                className="w-1/3 h-24 object-contain mx-4 rounded-lg"
               />
               <div className="flex-1 text-left my-3">
                 <h4 className="text-lg font-bold text-white_alt">{item.name}</h4>
