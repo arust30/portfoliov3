@@ -57,7 +57,7 @@ function Projects() {
   ];
 
   return (
-    <section className="bg-gradient-to-b from-white to-white_alt bg-gradient-anim duration-2000 dark:bg-gray-900 h-[200%]">
+    <section id="projects" className="bg-gradient-to-b from-white to-white_alt bg-gradient-anim duration-2000 dark:bg-gray-900 h-[200%]">
       <div className="py-8 mx-auto max-w-screen-xl text-center sm:py-16 lg:px-6">
         <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-primary mt-[30vh]">
           Projects

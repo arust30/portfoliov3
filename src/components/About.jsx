@@ -84,7 +84,7 @@ function About() {
   const [isLinkedInHovering, setIsLinkedInHovering] = useState(false);
 
   return (
-    <section className="bg-gradient-to-b from-primary to-white bg-gradient-anim duration-2000 dark:bg-gray-900 h-[200%] text-center">
+    <section id="about" className="bg-gradient-to-b from-primary to-white bg-gradient-anim duration-2000 dark:bg-gray-900 h-[200%] text-center">
       <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-white_alt">
         About Me
       </h2>

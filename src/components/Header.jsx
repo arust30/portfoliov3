@@ -61,7 +61,7 @@ function Header() {
             href="#download"
             style={{cursor: "pointer"}}
             onClick={handleDownload}
-            className={`mt-4 inline-flex items-center justify-center px-5 py-3 mr-8 text-base font-medium text-center rounded-lg ${
+            className={`mt-4 inline-flex items-center justify-center px-5 py-3 mr-8 text-base font-medium text-center rounded-lg duration-150 hover:font-bold ${
               isDownloaded
                 ? "bg-secondary border-secondary text-white_alt hover:secondary hover:border-secondary"
                 : "bg-primary border-primary text-white_alt hover:bg-light_gray hover:text-primary"
@@ -81,7 +81,7 @@ function Header() {
           </a>
           <a
             href="#contact"
-            class="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-center text-gray border border-black rounded-lg hover:bg-light_gray"
+            class="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-center text-gray border border-black rounded-lg hover:bg-light_gray duration-150 hover:font-bold"
           >
             Contact Me
           </a>

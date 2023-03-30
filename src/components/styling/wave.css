@@ -33,6 +33,10 @@
   }
 }
 
+#main {
+  scroll-behavior: smooth;
+}
+
 /* .reversed-wave {
   background: url(/src/images/wave.svg) repeat-x;
   position: absolute;
