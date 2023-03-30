@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { CodeBracketSquareIcon, HomeIcon, UserIcon, EnvelopeIcon } from '@heroicons/react/24/outline';
 
 const Nav = () => {
@@ -40,6 +40,31 @@ const Nav = () => {
     },
     ];
 
+    useEffect(() => {
+        const handleScroll = () => {
+          const sections = document.querySelectorAll('section');
+          const currentSectionIndex = [...sections].findIndex((section) => {
+            const sectionTop = section.offsetTop;
+            const sectionBottom = sectionTop + section.offsetHeight;
+            return window.pageYOffset >= sectionTop && window.pageYOffset < sectionBottom;
+          });
+          console.log(currentSectionIndex);
+          try {
+            const currentSectionHref = `#${sections[currentSectionIndex].id}`;
+            console.log(currentSectionHref);
+            setActiveNav(currentSectionHref);
+          }
+            catch (error) {
+                console.log(error);
+            }
+        };
+    
+        window.addEventListener('scroll', handleScroll);
+    
+        return () => {
+          window.removeEventListener('scroll', handleScroll);
+        };
+      }, []);
 
   return (
     <nav className="bg-black bg-opacity-30 w-max block px-3 py-2 z-20 fixed left-1/2 transform -translate-x-1/2 bottom-12 flex gap-3 rounded-lg backdrop-filter">
