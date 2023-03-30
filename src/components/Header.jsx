@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import ColumbiaPoloHeadshot from "../images/AndrewHeadshotColumbiaPolo.png";
 // import BlueTieSuitHeadshot from "../images/AndrewHeadshotBlueTieSuit.png";
-import "./wave.css";
 import { ArrowDownTrayIcon, CheckIcon } from "@heroicons/react/24/outline";
 
 function Header() {
@@ -16,7 +15,7 @@ function Header() {
   };
   return (
     <>
-      <div class="grid max-w-screen-xl h-[75vh] px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12">
+      <div class="grid max-w-screen-xl h-[75vh] px-4 pt-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12">
         <div class="mr-auto place-self-center lg:col-span-7">
           <h1 class="max-w-2xl mb-12 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl">
             Andrew Rust

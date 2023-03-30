@@ -33,7 +33,7 @@
   }
 }
 
-.reversed-wave {
+/* .reversed-wave {
   background: url(/src/images/wave.svg) repeat-x;
   position: absolute;
   rotate: 180deg;
@@ -50,4 +50,4 @@
   animation: wave 7s cubic-bezier(0.36, 0.45, 0.63, 0.53) -0.125s infinite,
     swell 7s ease -1.25s infinite;
   opacity: 1;
-}
+} */

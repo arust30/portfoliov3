@@ -42,35 +42,15 @@ function Experience() {
       button: "Visit Website",
       link: "https://www.thelogtrack.com",
     },
-    {
-      id: 5,
-      title: "EatDinDin",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisl nec lacinia tincidunt, nunc sem lacinia tortor, vel lacinia nisl lorem eget dolor. Sed euismod, nisl nec lacinia tincidunt, nunc sem lacinia tortor, vel lacinia nisl lorem eget dolor.",
-      image:
-        "https://flowbite.s3.amazonaws.com/blocks/marketing-ui/cta/fundraising-1.png",
-      button: "Visit Website",
-      link: "https://www.eatdindin.com",
-    },
-    {
-      id: 6,
-      title: "Q Social Technologies",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisl nec lacinia tincidunt, nunc sem lacinia tortor, vel lacinia nisl lorem eget dolor. Sed euismod, nisl nec lacinia tincidunt, nunc sem lacinia tortor, vel lacinia nisl lorem eget dolor.",
-      image:
-        "https://flowbite.s3.amazonaws.com/blocks/marketing-ui/cta/fundraising-1.png",
-      button: "Visit Website",
-      link: "https://www.q-social.com",
-    },
   ];
 
   return (
-    <section className="bg-gradient-to-b from-primary to-white bg-gradient-anim duration-2000 dark:bg-gray-900 h-[200vh] text-center">
-      <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-white_alt mt-[30vh]">
+    <section className="bg-gradient-to-b from-primary to-white bg-gradient-anim duration-2000 dark:bg-gray-900 h-[200%] text-center">
+      <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-white_alt">
         Experience
       </h2>
-      <div className="max-w-screen-xl px-4 mx-auto lg:px-6 text-left">
-        <div className="grid grid-cols-1 gap-4 mt-8 xl:gap-12 md:grid-cols-2">
+      <div className="max-w-screen-xl px-4 mx-auto lg:px-6 text-left w-2/3 md:block">
+        <div className="grid grid-cols-1 gap-4 mt-8 xl:gap-12">
           {experiences.map((experience) => (
             <div
               key={experience.id}

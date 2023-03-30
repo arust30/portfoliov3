@@ -1,13 +1,13 @@
 import React from "react";
-import "./wave.css";
+import "./styling/wave.css";
 
 function Wave() {
   return (
     <>
       <div class="wave"></div>
       <div class="wave"></div>
-      <div class="reversed-wave"></div>
-      <div class="reversed-wave"></div>
+      {/* <div class="reversed-wave"></div>
+      <div class="reversed-wave"></div> */}
     </>
   );
 }
