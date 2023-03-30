@@ -3,7 +3,7 @@ import React from "react";
 function Skills() {
   return (
     <>
-           <section class="bg-gradient-to-b from-light_gray to-white_alt bg-gradient-anim duration-2000 h-[200vh]">
+           <section class="bg-gradient-to-b from-light_gray to-white_alt bg-gradient-anim duration-2000 h-[150vh]">
         <div class="py-8 mx-auto max-w-screen-xl text-center sm:py-16 lg:px-6">
           <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-primary mt-[30vh]">
             Contact
