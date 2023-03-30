@@ -31,7 +31,7 @@ const Contact = () => {
       id="contact"
       className="bg-gradient-to-b from-white_alt to-primary bg-gradient-anim duration-2000 dark:bg-gray-900 h-[200%] text-center"
     >
-      <div className="max-w-6xl mx-auto px-4 py-16">
+      <div className="max-w-6xl mx-auto px-4 pt-[30vh]">
       <h2 className="text-4xl font-bold text-primary mb-8">Contact Me</h2>
 
       <a

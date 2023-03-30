@@ -1,65 +1,96 @@
 import React from "react";
 import { CheckCircleIcon } from "@heroicons/react/24/outline";
-import NCSSMImage from "./images/NCSSMImage.png";
-import WFUImage from "./images/WFUImage.png";
+import ByteSizeWebsiteScreenshot from "./images/ByteSizeWebsiteScreenshot.png";
+import WhirlDataDashboardScreenshot from "./images/WhirlDataDashboardScreenshot.png";
+import ByteSizeLearningLogoBlue from "./images/logos/ByteSizeLearningLogoBlue.png";
+import WhirlLogo from "./images/logos/LetsWhirlLogo.png";
+import LogTrackLogoBlue from "./images/logos/LogTrackLogoBlue.png";
+import LogTrackWebAppScreenshot from "./images/LogTrackWebAppScreenshot.png";
+
 import ColumbiaImage from "./images/ColumbiaImage.png";
 
 function Projects() {
   const projects = [
     {
       id: 1,
-      title: "Flowbite",
+      title: "ByteSize Learning Website",
       overview:
-        "Since 1984, Flowbite has been serving up grab-and-go frozen daiquiris from its stores across the U.S. Its signature drinks, souvenir cups, and discounted refills have made Flowbite synonymous with great music, good vibes, and starting the best party in town.",
-      image: NCSSMImage,
-      skills: ["React", "TailwindCSS", "AWS", "Node.js", "Express", "MongoDB"],
+        "In this project, I built a website for ByteSize Learning, a learning platform that provides short, bite-sized courses to help kids learn new skills quickly and easily.",
+      image: ByteSizeWebsiteScreenshot,
+      logo: ByteSizeLearningLogoBlue,
+      skills: [
+        "React.js",
+        "TailwindCSS",
+        "Python",
+        "Flask",
+        "Stripe.js",
+        "Firestore",
+        "Firebase",
+        "Cloud Run",
+        "Docker",
+      ],
       features: [
         "Responsive Design",
-        "User Authentication",
         "Payment Processing",
-        "Admin Dashboard",
-        "RESTful API",
+        "RESTful APIs",
+        "Serverless Architecture",
+        "Docker Containerization",
+        "Continuous Integration",
       ],
-      link: "https://www.flowbite.com",
+      link: "https://www.bytesizelearning.org",
     },
     {
       id: 2,
-      title: "ByteSize Learning",
+      title: "Whirl Data Dashboard",
       overview:
-        "ByteSize Learning is a learning platform that provides short, bite-sized courses to help users learn new skills quickly and easily.",
-      image: WFUImage,
-      skills: ["React", "TailwindCSS", "AWS", "Node.js", "Express", "MongoDB"],
+        "Whirl Data Dashboard is a data visualization tool that helps the Founders of Let's Whirl understand the data they collect from their users and their app demograhics.",
+      image: WhirlDataDashboardScreenshot,
+      logo: WhirlLogo,
+      skills: [
+        "React.js",
+        "TailwindCSS",
+        "Regraph.js",
+        "RESTful APIs",
+        "Firebase",
+      ],
       features: [
+        "Data Visualization",
+        "Data Analytics",
         "Responsive Design",
-        "User Authentication",
-        "Payment Processing",
         "Admin Dashboard",
         "RESTful API",
+        "Scalable Architecture",
+        "Continuous Deployment",
       ],
-      link: "https://www.bytesizelearning.com",
+      link: "https://www.bytesizelearning.org",
     },
     {
       id: 3,
-      title: "Whirl Data Dashboard",
+      title: "LogTrack Tracking Web App",
       overview:
-        "Whirl Data Dashboard is a data visualization tool that helps users make sense of complex data sets.",
-      image: ColumbiaImage,
-      skills: ["React", "TailwindCSS", "AWS", "Node.js", "Express", "MongoDB"],
+        "LogTrack is a web app that allows users to track their trucking shipments and share documents with their clients, partners, and other stakeholders - all in one place.",
+      image: LogTrackWebAppScreenshot,
+      logo: LogTrackLogoBlue,
+      skills: ["React.js", "Material UI", "Node.js", "MySQL", "Figma"],
       features: [
         "Responsive Design",
         "User Authentication",
-        "Payment Processing",
-        "Admin Dashboard",
+        "Tracking System",
+        "Document Sharing",
+        "Upload/Download Files",
         "RESTful API",
       ],
-      link: "https://www.whirldatadashboard.com",
+      link: "https://www.thelogtrack.com",
     },
   ];
 
   return (
-    <section id="projects" className="bg-gradient-to-b from-white to-white_alt bg-gradient-anim duration-2000 dark:bg-gray-900 h-[200%]">
+    <section
+      id="projects"
+      className="bg-gradient-to-b from-white to-white_alt bg-gradient-anim duration-2000 dark:bg-gray-900 h-full"
+    >
       <div className="py-8 mx-auto max-w-screen-xl text-center sm:py-16 lg:px-6">
-        <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-primary mt-[30vh]">
+        <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-primary">
           Projects
         </h2>
         <div className="max-w-screen-xl px-4 py-8 mx-auto lg:px-6 sm:py-16 lg:py-24">
@@ -74,10 +105,15 @@ function Projects() {
                     {skill}
                   </span>
                 ))}
-                <div className="max-w-5xl mx-auto mt-8 lg:mt-16">
+                <div className="flex max-w-5xl mt-8 lg:mt-16 mx-6 gap-8 lg:gap-16">
                   <img
                     className="w-[50%] rounded-lg shadow-lg"
                     src={project.image}
+                    alt="nothing"
+                  />
+                  <img
+                    className="w-[50%] object-contain"
+                    src={project.logo}
                     alt="nothing"
                   />
                 </div>
@@ -87,7 +123,7 @@ function Projects() {
                       <h3 class="text-2xl font-extrabold text-gray-900 dark:text-white">
                         Overview
                       </h3>
-                      <p class="mt-2 text-lg font-normal text-gray-500 dark:text-gray-400">
+                      <p class="mt-2 text-lg font-normal text-gray-500 dark:text-gray-400 text-left">
                         {project.overview}
                       </p>
                     </div>
