@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 // If I eventually get good images to go here, I'll uncomment these
 // import NCSSMImage from "./images/NCSSMImage.png";
@@ -11,6 +11,12 @@ import {
   BuildingLibraryIcon,
   AcademicCapIcon,
 } from "@heroicons/react/24/outline";
+
+//import Github and LinkedIn logos
+// import GitHubLogoWhite from "./images/logos/GitHubLogoWhite.png";
+import GitHubLogoDark from "./images/logos/GitHubLogoDark.png";
+import LinkedInLogoWhite from "./images/logos/LinkedInLogoWhite.png";
+import LinkedInLogoBlue from "./images/logos/LinkedInLogoBlue.png";
 
 //Experience logos
 import LetsWhirlLogo from "./images/logos/LetsWhirlLogo.png";
@@ -75,17 +81,40 @@ function About() {
     },
   ];
 
+  const [isLinkedInHovering, setIsLinkedInHovering] = useState(false);
+
   return (
     <section className="bg-gradient-to-b from-primary to-white bg-gradient-anim duration-2000 dark:bg-gray-900 h-[200%] text-center">
       <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-white_alt">
         About Me
       </h2>
-        <p className="text-lg text-white_alt font-light">
-Here is where I've learned and worked:
-        </p>
+      <p className="text-lg text-white_alt font-light">
+        Here is where I've learned and worked:
+      </p>
+      <a
+        href="https://www.linkedin.com/in/andrew-rust30/"
+        className="inline-flex items-center justify-center px-5 py-3 mr-8 text-base font-medium text-center rounded-lg bg-primary border-primary text-white_alt hover:bg-light_gray hover:text-primary"
+        onMouseEnter={() => setIsLinkedInHovering(true)}
+        onMouseLeave={() => setIsLinkedInHovering(false)}
+        style={{ cursor: "pointer" }}
+      >
+        LinkedIn
+        {isLinkedInHovering ? (
+          <img src={LinkedInLogoBlue} className="w-5 h-5 ml-3" alt="nothing" />
+        ) : (
+          <img src={LinkedInLogoWhite} className="w-5 h-5 ml-3" alt="nothing" />
+        )}
+      </a>
 
+      <a
+        href="https://www.github.com/arust30"
+        className="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-center text-gray border border-black rounded-lg hover:bg-light_gray"
+        style={{ cursor: "pointer" }}
+      >
+        Github
+        <img src={GitHubLogoDark} className="w-5 h-5 ml-3" alt="nothing" />
+      </a>
       <div className="flex flex-col md:flex-row">
-
         {/* Left half - render education */}
         <div className="md:w-1/2 p-4">
           <h3 className="text-2xl font-bold mb-4">Education</h3>
