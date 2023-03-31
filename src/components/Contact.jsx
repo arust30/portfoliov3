@@ -80,7 +80,7 @@ const Contact = () => {
                 type="email"
                 id="email"
                 name="email"
-                placeholder="email@gmail.com"
+                placeholder="email@gmail.com" 
                 required
                 className="border-2 border-primary-variant rounded-lg p-2 w-full text-white bg-transparent"
               />
